@@ -39,7 +39,8 @@ function App() {
  
   
   return (
-    <Box gap='2rem'  display='flex' flexWrap='wrap' margin='auto' alignItems='center' flexDirection='column' justifyContent='center'>
+    <Box 
+    gap='2rem'  display='flex' flexWrap='wrap' margin='auto' alignItems='center' flexDirection='column' justifyContent='center'>
     
         <Box display='flex'>
         <Input width='200px' placeholder='Buscar Imagenes' onChange={e => setValor(e.target.value)} />
@@ -48,7 +49,7 @@ function App() {
          
         
         </Box>
-        <Box  gap='1rem' display='flex' flexWrap='wrap' width='1200px' >
+        <Box  gap='1rem' display='flex' flexWrap='wrap' width={{xl:'1200px',md: '800px'}} >
           
           
            {resultados.map((elemento, indice) => {
@@ -69,8 +70,8 @@ function App() {
                   <Box margin='0 auto' width='300px'>
                     <Image boxShadow='2xl' width='100%' height='300px' objectFit='cover'  src={elemento.urls.regular}/>
                   </Box>
-                  <Text>{elemento.id}</Text>
-                  <motion.h1 animate={{fontSize:'20px'}}>Ubicacion:{elemento.user.location}</motion.h1>
+                  <motion.h1  animate={{ rotate: 360, marginTop:'20px',}}
+                              transition={{ from: 90, duration: 2 }} >Ubicacion:{elemento.user.location}</motion.h1>
 
                   </Box>
 
