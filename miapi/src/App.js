@@ -1,10 +1,7 @@
 import {  useEffect, useState} from 'react';
 import './App.css';
-
-
-
-import { Buttonn } from './Components/main';
-import { Box, Heading, Text, Input,Image, Button,Stack,Card,CardBody,CardFooter} from '@chakra-ui/react';
+import {motion} from 'framer-motion'
+import { Box,Text, Input,Image, Button} from '@chakra-ui/react';
 
 
 
@@ -73,7 +70,7 @@ function App() {
                     <Image boxShadow='2xl' width='100%' height='300px' objectFit='cover'  src={elemento.urls.regular}/>
                   </Box>
                   <Text>{elemento.id}</Text>
-                  <Text>Ubicacion:{elemento.id}</Text>
+                  <motion.h1 animate={{fontSize:'20px'}}>Ubicacion:{elemento.user.location}</motion.h1>
 
                   </Box>
 
