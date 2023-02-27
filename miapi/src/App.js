@@ -33,17 +33,17 @@ function App() {
         
         <Input variant='flushed' width='200px' placeholder='Buscar Imagenes' onChange={e => setValor(e.target.value)} />
 
-        <Button onClick={() => buscarResultado()} >click</Button>
+        <Button colorScheme='cyan' onClick={() => buscarResultado()} >Buscar</Button>
 
 
       </Box>
-      <Box bg={'blackAlpha.200'} justifyContent='center' gap='1rem' display='flex' flexWrap='wrap' width={{ xl: '1200px', md: '800px' }} >
+      <Box justifyContent='center' gap='1rem' display='flex' flexWrap='wrap' width={{ xl: '1200px', md: '800px' }} >
 
 
         {resultados.map((elemento, indice) => {
           return (
             <Box
-              bg={'white'}
+              bg={'#cbdbdd'}
               flexWrap='wrap'
               boxShadow='dark-lg'
               borderRadius='20px'
@@ -55,9 +55,9 @@ function App() {
               height='450px'
               key={indice}>
               <Box margin='0 auto' width='300px'>
-                <Image boxShadow='2xl' width='100%' height='300px' objectFit='cover' src={elemento.urls.regular} />
+                <Image marginBottom={'20px'} boxShadow='2xl' width='100%' height='300px' objectFit='cover' src={elemento.urls.regular} />
               </Box>
-              <motion.h1 animate={{ rotate: 360, marginTop: '20px', }}
+              <motion.h1  animate={{ rotate: 360, marginTop: '20px',color:'black'}}
                 transition={{ from: 90, duration: 2 }} >Ubicacion:{elemento.user.location}</motion.h1>
 
             </Box>
