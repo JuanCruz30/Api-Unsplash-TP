@@ -22,16 +22,16 @@ function App() {
 
   useEffect(() => {
     buscarResultado();
-  }, []);
+  }, [] );
   
   
   return (
     <Box 
       gap='2rem' display='flex' flexWrap='wrap' margin='auto' alignItems='center' flexDirection='column' justifyContent='center'>
 
-      <Box display='flex' >
+      <Box display='flex' marginTop={'100px'}>
         
-        <Input variant='flushed' width='200px' placeholder='Buscar Imagenes' onChange={e => setValor(e.target.value)} />
+        <Input  variant='flushed' width='200px' placeholder='Buscar Imagenes' onChange={e => setValor(e.target.value)} />
 
         <Button colorScheme='cyan' onClick={() => buscarResultado()} >Buscar</Button>
 
@@ -54,11 +54,12 @@ function App() {
               width='380px'
               height='450px'
               key={indice}>
+              
               <Box margin='0 auto' width='300px'>
                 <Image marginBottom={'20px'} boxShadow='2xl' width='100%' height='300px' objectFit='cover' src={elemento.urls.regular} />
               </Box>
               <motion.h1  animate={{ rotate: 360, marginTop: '20px',color:'black'}}
-                transition={{ from: 90, duration: 2 }} >Ubicacion:{elemento.user.location}</motion.h1>
+                transition={{ from: 90, duration: 2 }} >Ubicacion:      {elemento.user.location}</motion.h1>
 
             </Box>
 
