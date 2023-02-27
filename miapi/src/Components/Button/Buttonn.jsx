@@ -4,7 +4,9 @@ import { Button } from '@chakra-ui/react'
 
 const Buttonn = ( {buscarResultado}) => {
   return (
-    <Button onClick={buscarResultado}>hola</Button>
+    <Button
+    
+    onClick={buscarResultado}>hola</Button>
   )
 }
 
